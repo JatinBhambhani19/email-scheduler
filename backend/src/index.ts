@@ -100,8 +100,7 @@ app.use(
 // GOOGLE OAUTH
 // =====================================================
 
-const gRedirect =
-  `http://localhost:${cfg.port}/auth/google/callback`;
+const gRedirect = `${cfg.backendBase}/auth/google/callback`;
 
 
 app.get('/auth/google', (_req, res) => {
@@ -253,8 +252,7 @@ app.get(
 // SLACK OAUTH
 // =====================================================
 
-const sRedirect =
-  `${cfg.base}/auth/slack/callback`;
+const sRedirect = `${cfg.backendBase}/auth/slack/callback`;
 
 
 app.get(
